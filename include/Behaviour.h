@@ -14,7 +14,7 @@ public:
 	virtual float behave(float f);
 };
 
-class LinearUp : public Behaviour
+class EaseOutCubic : public Behaviour
 {
 public:
 	virtual float behave(float f);
@@ -26,13 +26,13 @@ public:
 	virtual float behave(float f);
 };
 
-class EaseIn : public Behaviour
+class EaseInOutExpo : public Behaviour
 {
 public:
 	virtual float behave(float f);
 };
 
-class EaseOut : public Behaviour
+class EaseInOut : public Behaviour
 {
 public:
 	virtual float behave(float f);

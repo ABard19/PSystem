@@ -12,19 +12,19 @@ ParticleManager::ParticleManager()
 			switch (rand() % 5)
 			{
 			case 0:
-				b[j] = new Uniform();
+				b[j] = new EaseInOutExpo();
 				break;
 			case 1:
-				b[j] = new LinearUp();
+				b[j] = new EaseOutCubic();
 				break;
 			case 2:
 				b[j] = new LinearDown();
 				break;
 			case 3:
-				b[j] = new EaseIn();
+				b[j] = new Uniform();
 				break;
 			case 4:
-				b[j] = new EaseOut();
+				b[j] = new EaseInOut();
 				break;
 			}
 			b_collection[i].push_back(b[j]);
@@ -40,6 +40,7 @@ ParticleManager::ParticleManager()
 	pm.push_back(pm1);
 	ParticleSystem* pm2 = new ParticleSystem(800, 500, 2, 4, 2, 6, -180, 0, -120, 0, 100, 30, b_collection[1], tex2);
 	pm.push_back(pm2);
+
 
 }
 

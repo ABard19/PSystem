@@ -7,9 +7,9 @@ float Uniform::behave(float f)
 	return 1;
 }
 
-float LinearUp::behave(float f)
+float EaseOutCubic::behave(float f)
 {
-	return f;
+	return   1 + (--f) * f * f;;
 }
 
 float LinearDown::behave(float f)
@@ -17,13 +17,19 @@ float LinearDown::behave(float f)
 	return 1 - f;
 }
 
-float EaseIn::behave(float f)
+float EaseInOutExpo::behave(float f)
 {
-	return f * f;
+
+	if (f < 0.5) {
+		return (pow(2, 16 * f) - 1) / 510;
+	}
+	else {
+		return 1 - 0.5 * pow(2, -16 * (f - 0.5));
+	}
 }
 
-float EaseOut::behave(float f)
+float EaseInOut::behave(float f)
 {
 	float PI = 3.1415926f;
-	return cosf(PI / 2 * f);
+	return 0.5 * (1 + sin(PI * (f - 0.5)));
 }

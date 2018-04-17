@@ -25,8 +25,8 @@ public:
 private:
 	std::vector<ParticleSystem*> pm;
 
-	Behaviour* b[3];
-	std::vector<Behaviour*> b_collection[3];
+	Behaviour* b[6];
+	std::vector<Behaviour*> b_collection[6];
 
 	sf::Texture tex1;
 	sf::Texture tex2;
