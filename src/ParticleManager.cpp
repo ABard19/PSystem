@@ -40,14 +40,15 @@ ParticleManager::ParticleManager()
 	float pX = 50 + rand() % 750; float pY = 50 + rand() % 750; float pX1 = 50 + rand() % 750; float pY1 = 50 + rand() % 750; float pX2 = 50 + rand() % 750; float pY2 = 50 + rand() % 750;
 	float vMin = 1 + rand() % 7; float vMax = vMin + 1+rand() % 5; float vMin1 = 1 + rand() % 7; float vMax1 = vMin1 + 1+rand() % 5; float vMin2 = 1 + rand() % 7; float vMax2 = vMin2 + 1+rand() % 5;
 	float lMin= 1 + rand() % 7; float lMax = vMin + 1 + rand() % 5; float lMin1 = 1 + rand() % 7; float lMax1 = vMin1 + 1 + rand() % 5; float lMin2 = 1 + rand() % 7; float lMax2 = vMin2 + 1 + rand() % 5;
-	float size = 1 + rand() % 25; float size1 = 1 + rand() % 25; float size2 = 1 + rand() % 25;
+//	float size = 1 + rand() % 25; float size1 = 1 + rand() % 25; float size2 = 1 + rand() % 25;
 	float nop = 20 + rand() % 50; float nop1 = 20 + rand() % 50; float nop2 = 20 + rand() % 50;
+	float sMin = 1 + rand() % 5; float sMax = sMin + 1 + rand() % 3; float sMin1 = 1 + rand() % 5; float sMax1 = sMin1 + 1 + rand() % 5; float sMin2 = 1 + rand() % 3; float sMax2 = sMin2 + 1 + rand() % 3;
 	
-	ParticleSystem* pm1 = new ParticleSystem(pX, pY, vMin, vMax, lMin, lMax, 0, 360, 0, 90, size, nop, b_collection[0], tex1);
+	ParticleSystem* pm1 = new ParticleSystem(250, 250, vMin, vMax, lMin, lMax, 0, 360, 0, 90, sMin, nop, b_collection[0], tex1);
 	pm.push_back(pm1);
-	ParticleSystem* pm2 = new ParticleSystem(pX1, pY1, vMin1, vMax1, lMin1, lMax1, -180, 0, -120, 120, size1, nop1, b_collection[1], tex2);
+	ParticleSystem* pm2 = new ParticleSystem(500, 500, vMin1, vMax1, lMin1, lMax1, -180, 0, -120, 120, sMin1,  nop1, b_collection[1], tex2);
 	pm.push_back(pm2);
-	ParticleSystem* pm3 = new ParticleSystem(pX2, pY2, vMin2, vMax2, lMin2, lMax2, -180, 0, -120, 120, size2, nop2, b_collection[2], tex3);
+	ParticleSystem* pm3 = new ParticleSystem(350, 350, vMin2, vMax2, lMin2, lMax2, -180, 0, -120, 120, sMin2,  nop2, b_collection[2], tex3);
 	pm.push_back(pm3);
 
 

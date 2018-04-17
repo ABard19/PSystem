@@ -27,10 +27,10 @@ ParticleSystem::ParticleSystem(float pX, float pY, float vCurr_min, float vCurr_
 
 	for (int i = 0; i < this->init_number; i++)
 	{
-		float vCurr =1+ rand() % ((int)(vCurr_max * 10) - (int)(vCurr_min * 10)) / 10.0f + vCurr_min;
-		float lifetime =1+ rand() % ((int)(lifetime_max * 10) - (int)(lifetime_min * 10)) / 10.0f + lifetime_min;
-		float angle =1+ rand() % ((int)(angle_max * 10) - (int)(angle_min * 10)) / 10.0f + angle_min;
-		float rCurr =1+ rand() % ((int)(rCurr_max * 10) - (int)(rCurr_min * 10)) / 10.0f + rCurr_min;
+		float vCurr =1+ (rand() % ((int)(vCurr_max * 10) - (int)(vCurr_min * 10)) / 10.0f + vCurr_min);
+		float lifetime =1+ (rand() % ((int)(lifetime_max * 10) - (int)(lifetime_min * 10)) / 10.0f + lifetime_min);
+		float angle =1+ (rand() % ((int)(angle_max * 10) - (int)(angle_min * 10)) / 10.0f + angle_min);
+		float rCurr =1+ (rand() % ((int)(rCurr_max * 10) - (int)(rCurr_min * 10)) / 10.0f + rCurr_min);
 
 		Particle* particle = new Particle(pX, pY, vCurr, lifetime, angle, rCurr, sCurr, b, tex);
 		p.push_back(particle);
@@ -85,20 +85,22 @@ void ParticleSystem::reset(int i)
 	float rFin = rand() % ((int)(rCurr_max * 10) - (int)(rCurr_min * 10)) / 10.0f + rCurr_min;
 	float sFin = p[i]->GetParameter().sFin;
 	*/
-	float pX = 50 + rand() % 750; float pY = 50 + rand() % 750; 
+
+
+	std::cout << "I am here";
 	float vFin = 1 + rand() % 7; 
 	float life_end = 1 + rand() % 7;
 	float angle = -120 + rand() % 120;
 	float rFin= -120 + rand() % 120;
-	float sFin = 1 + rand() % 25; 
+	float sFin = 3; 
 
 
 	Particle::Parameters nP(pX, pY, vFin, life_end, angle, rFin, sFin);
-
+	nP.time = 0;
 	p[i]->SetParameter(nP);
 	p[i]->shape->setSize(sf::Vector2f(0, 0));
 	p[i]->shape->setOrigin(sf::Vector2f(0, 0));
-	p[i]->shape->setPosition(pX, pY);
+	p[i]->shape->setPosition(nP.pX, nP.pY);
 
 	//Values getting muddled here. vCurrocity -10000 something and same for a couple of others
 		
@@ -109,10 +111,10 @@ void ParticleSystem::addParticle()
 {
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Add))
 	{
-		float vCurr = rand() % ((int)(vCurr_max * 10) - (int)(vCurr_min * 10)) / 10.0f + vCurr_min;
-		float lifetime = rand() % ((int)(lifetime_max * 10) - (int)(lifetime_min * 10)) / 10.0f + lifetime_min;
-		float angle = rand() % ((int)(angle_max * 10) - (int)(angle_min * 10)) / 10.0f + angle_min;
-		float rCurr = rand() % ((int)(rCurr_max * 10) - (int)(rCurr_min * 10)) / 10.0f + rCurr_min;
+		float vCurr =1+ rand() % ((int)(vCurr_max ) - (int)(vCurr_min)) /  vCurr_min;
+		float lifetime =1+ rand() % ((int)(lifetime_max) - (int)(lifetime_min )) /  lifetime_min;
+		float angle =1+ rand() % ((int)(angle_max ) - (int)(angle_min )) /  angle_min;
+		float rCurr =1+ rand() % ((int)(rCurr_max) - (int)(rCurr_min)) /  rCurr_min;
 
 		Particle* particle = new Particle(pX, pY, vCurr, lifetime, angle, rCurr, sCurr, b, tex);
 		p.push_back(particle);
