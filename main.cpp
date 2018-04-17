@@ -31,10 +31,10 @@ int main()
 
 		while (accumulatedTime >= 1.0f / 60.0f)
 		{
-			ps->update_state();
+			ps->Update();
 			accumulatedTime -= 1.0f / 60.0f;
 		}
-		ps->render_frame(window);
+		ps->Draw(window);
 		window.display();
 	}
 

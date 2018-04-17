@@ -47,6 +47,7 @@ Particle::~Particle()
 	shape = nullptr;
 }
 
+//Here we need behaviour to be inherent from system
 void Particle::update()
 {
 	m_P.time += 1.0f / 60.0f;

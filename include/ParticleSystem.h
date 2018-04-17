@@ -42,5 +42,5 @@ private:
 	std::vector<Behaviour*> b;
 
 	void reset(int i);
-	void add_particle();
+	void addParticle();
 };

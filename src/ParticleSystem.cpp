@@ -27,10 +27,10 @@ ParticleSystem::ParticleSystem(float pX, float pY, float vCurr_min, float vCurr_
 
 	for (int i = 0; i < this->init_number; i++)
 	{
-		float vCurr = rand() % ((int)(vCurr_max * 10) - (int)(vCurr_min * 10)) / 10.0f + vCurr_min;
-		float lifetime = rand() % ((int)(lifetime_max * 10) - (int)(lifetime_min * 10)) / 10.0f + lifetime_min;
-		float angle = rand() % ((int)(angle_max * 10) - (int)(angle_min * 10)) / 10.0f + angle_min;
-		float rCurr = rand() % ((int)(rCurr_max * 10) - (int)(rCurr_min * 10)) / 10.0f + rCurr_min;
+		float vCurr =1+ rand() % ((int)(vCurr_max * 10) - (int)(vCurr_min * 10)) / 10.0f + vCurr_min;
+		float lifetime =1+ rand() % ((int)(lifetime_max * 10) - (int)(lifetime_min * 10)) / 10.0f + lifetime_min;
+		float angle =1+ rand() % ((int)(angle_max * 10) - (int)(angle_min * 10)) / 10.0f + angle_min;
+		float rCurr =1+ rand() % ((int)(rCurr_max * 10) - (int)(rCurr_min * 10)) / 10.0f + rCurr_min;
 
 		Particle* particle = new Particle(pX, pY, vCurr, lifetime, angle, rCurr, sCurr, b, tex);
 		p.push_back(particle);
@@ -53,7 +53,7 @@ ParticleSystem::~ParticleSystem()
 
 void ParticleSystem::update()
 {
-	add_particle();
+	addParticle();
 	for (int i = 0; i < p.size(); i++)
 	{
 		if (p[i]->GetParameter().time<= p[i]->GetParameter().lifetime)
@@ -78,11 +78,21 @@ void ParticleSystem::draw(sf::RenderWindow& window)
 void ParticleSystem::reset(int i)
 {
 	// TODO check access bounds for i in p[];
+	/*
 	float vFin = rand() % ((int)(vCurr_max * 10) - (int)(vCurr_min * 10)) / 10.0f + vCurr_min;
 	float life_end = rand() % ((int)(lifetime_max * 10) - (int)(lifetime_min * 10)) / 10.0f + lifetime_min;
 	float angle = rand() % ((int)(angle_max * 10) - (int)(angle_min * 10)) / 10.0f + angle_min;
 	float rFin = rand() % ((int)(rCurr_max * 10) - (int)(rCurr_min * 10)) / 10.0f + rCurr_min;
 	float sFin = p[i]->GetParameter().sFin;
+	*/
+	float pX = 50 + rand() % 750; float pY = 50 + rand() % 750; 
+	float vFin = 1 + rand() % 7; 
+	float life_end = 1 + rand() % 7;
+	float angle = -120 + rand() % 120;
+	float rFin= -120 + rand() % 120;
+	float sFin = 1 + rand() % 25; 
+
+
 	Particle::Parameters nP(pX, pY, vFin, life_end, angle, rFin, sFin);
 
 	p[i]->SetParameter(nP);
@@ -91,14 +101,13 @@ void ParticleSystem::reset(int i)
 	p[i]->shape->setPosition(pX, pY);
 
 	//Values getting muddled here. vCurrocity -10000 something and same for a couple of others
-	std::cout << "Am here \n";
-	
+		
 
 }
 
-void ParticleSystem::add_particle()
+void ParticleSystem::addParticle()
 {
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Add))
 	{
 		float vCurr = rand() % ((int)(vCurr_max * 10) - (int)(vCurr_min * 10)) / 10.0f + vCurr_min;
 		float lifetime = rand() % ((int)(lifetime_max * 10) - (int)(lifetime_min * 10)) / 10.0f + lifetime_min;
@@ -108,7 +117,7 @@ void ParticleSystem::add_particle()
 		Particle* particle = new Particle(pX, pY, vCurr, lifetime, angle, rCurr, sCurr, b, tex);
 		p.push_back(particle);
 	}
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Subtract))
 	{
 		if (p.size() >= 1)
 		{

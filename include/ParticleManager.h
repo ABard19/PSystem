@@ -19,14 +19,14 @@ public:
 	ParticleManager();
 	~ParticleManager();
 
-	void update_state();
-	void render_frame(sf::RenderWindow& window);
+	void Update();
+	void Draw(sf::RenderWindow& window);
 
 private:
 	std::vector<ParticleSystem*> pm;
 
-	Behaviour* b[6];
-	std::vector<Behaviour*> b_collection[6];
+	Behaviour* b[5];
+	std::vector<Behaviour*> b_collection[5];
 
 	sf::Texture tex1;
 	sf::Texture tex2;

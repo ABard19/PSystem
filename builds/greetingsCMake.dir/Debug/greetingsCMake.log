@@ -1,8 +1,14 @@
-﻿Build started 4/17/2018 10:04:34 AM.
+﻿Build started 4/17/2018 11:39:16 AM.
      1>Project "C:\Users\Akshay\Desktop\PS\builds\greetingsCMake.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\CL.exe /c /IC:\Users\Akshay\Desktop\PS\3rdparty\gtest\include /I"C:\Users\Akshay\Desktop\PS\3rdparty\SFML-2.4.2\include" /IC:\Users\Akshay\Desktop\PS\include /Zi /nologo /W3 /WX- /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"greetingsCMake.dir\Debug\\" /Fd"greetingsCMake.dir\Debug\vc140.pdb" /Gd /TP /errorReport:prompt C:\Users\Akshay\Desktop\PS\src\ParticleManager.cpp
-         ParticleManager.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\CL.exe /c /IC:\Users\Akshay\Desktop\PS\3rdparty\gtest\include /I"C:\Users\Akshay\Desktop\PS\3rdparty\SFML-2.4.2\include" /IC:\Users\Akshay\Desktop\PS\include /Zi /nologo /W3 /WX- /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"greetingsCMake.dir\Debug\\" /Fd"greetingsCMake.dir\Debug\vc140.pdb" /Gd /TP /errorReport:prompt C:\Users\Akshay\Desktop\PS\src\ParticleSystem.cpp
+         ParticleSystem.cpp
+     1>C:\Users\Akshay\Desktop\PS\src\ParticleSystem.cpp(88): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+     1>C:\Users\Akshay\Desktop\PS\src\ParticleSystem.cpp(89): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+     1>C:\Users\Akshay\Desktop\PS\src\ParticleSystem.cpp(90): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+     1>C:\Users\Akshay\Desktop\PS\src\ParticleSystem.cpp(91): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+     1>C:\Users\Akshay\Desktop\PS\src\ParticleSystem.cpp(92): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+     1>C:\Users\Akshay\Desktop\PS\src\ParticleSystem.cpp(93): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Akshay\Desktop\PS\builds\Debug\greetingsCMake.exe" /INCREMENTAL /NOLOGO /LIBPATH:C:/Users/Akshay/Desktop/PS/3rdparty/gtest/lib /LIBPATH:C:/Users/Akshay/Desktop/PS/3rdparty/gtest/lib/Debug /LIBPATH:"C:/Users/Akshay/Desktop/PS/3rdparty/SFML-2.4.2/lib" /LIBPATH:"C:/Users/Akshay/Desktop/PS/3rdparty/SFML-2.4.2/lib/Debug" gtest.lib gtest_main.lib "..\3rdparty\SFML-2.4.2\lib\flac.lib" "..\3rdparty\SFML-2.4.2\lib\freetype.lib" "..\3rdparty\SFML-2.4.2\lib\jpeg.lib" "..\3rdparty\SFML-2.4.2\lib\ogg.lib" "..\3rdparty\SFML-2.4.2\lib\openal32.lib" "..\3rdparty\SFML-2.4.2\lib\sfml-audio-d.lib" "..\3rdparty\SFML-2.4.2\lib\sfml-audio-s-d.lib" "..\3rdparty\SFML-2.4.2\lib\sfml-audio-s.lib" "..\3rdparty\SFML-2.4.2\lib\sfml-audio.lib" "..\3rdparty\SFML-2.4.2\lib\sfml-graphics-d.lib" "..\3rdparty\SFML-2.4.2\lib\sfml-graphics-s-d.lib" "..\3rdparty\SFML-2.4.2\lib\sfml-graphics-s.lib" "..\3rdparty\SFML-2.4.2\lib\sfml-graphics.lib" "..\3rdparty\SFML-2.4.2\lib\sfml-main-d.lib" "..\3rdparty\SFML-2.4.2\lib\sfml-main.lib" "..\3rdparty\SFML-2.4.2\lib\sfml-network-d.lib" "..\3rdparty\SFML-2.4.2\lib\sfml-network-s-d.lib" "..\3rdparty\SFML-2.4.2\lib\sfml-network-s.lib" "..\3rdparty\SFML-2.4.2\lib\sfml-network.lib" "..\3rdparty\SFML-2.4.2\lib\sfml-system-d.lib" "..\3rdparty\SFML-2.4.2\lib\sfml-system-s-d.lib" "..\3rdparty\SFML-2.4.2\lib\sfml-system-s.lib" "..\3rdparty\SFML-2.4.2\lib\sfml-system.lib" "..\3rdparty\SFML-2.4.2\lib\sfml-window-d.lib" "..\3rdparty\SFML-2.4.2\lib\sfml-window-s-d.lib" "..\3rdparty\SFML-2.4.2\lib\sfml-window-s.lib" "..\3rdparty\SFML-2.4.2\lib\sfml-window.lib" "..\3rdparty\SFML-2.4.2\lib\vorbis.lib" "..\3rdparty\SFML-2.4.2\lib\vorbisenc.lib" "..\3rdparty\SFML-2.4.2\lib\vorbisfile.lib" kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Akshay/Desktop/PS/builds/Debug/greetingsCMake.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Akshay/Desktop/PS/builds/Debug/greetingsCMake.lib" /MACHINE:X64  /machine:x64 greetingsCMake.dir\Debug\main.obj
          greetingsCMake.dir\Debug\Behaviour.obj
@@ -14,4 +20,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:03.43
+Time Elapsed 00:00:05.26
