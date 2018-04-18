@@ -324,6 +324,17 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <Name>ZERO_CHECK</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\resources\t1.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="..\resources\t2.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="..\resources\t3.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

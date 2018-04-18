@@ -41,5 +41,19 @@
     <Filter Include="Source Files">
       <UniqueIdentifier>{B53EF663-43AD-3E0C-92C7-A4B387E4C81A}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Resource">
+      <UniqueIdentifier>{09f1291d-409e-4980-baa0-038db786019d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\resources\t1.png">
+      <Filter>Resource</Filter>
+    </Image>
+    <Image Include="..\resources\t2.png">
+      <Filter>Resource</Filter>
+    </Image>
+    <Image Include="..\resources\t3.png">
+      <Filter>Resource</Filter>
+    </Image>
   </ItemGroup>
 </Project>

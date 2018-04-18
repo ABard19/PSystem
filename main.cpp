@@ -6,7 +6,6 @@
 #include <SFML/OpenGL.hpp>
 #include <SFML/Main.hpp>
 #include <time.h>
-
 #include "ParticleManager.h"
 
 int main()
